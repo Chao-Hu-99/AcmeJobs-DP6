@@ -16,6 +16,8 @@
 <%@taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles"%>
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
+
+
 <acme:footer-panel>
 	<acme:footer-subpanel code="master.footer.title.about">
 		<acme:footer-option icon="fa fa-building" code="master.footer.label.company" action="/master/company"/>
@@ -39,3 +41,5 @@
 	</acme:footer-logo>		
 	
 </acme:footer-panel>
+
+<input class="randomBanner" type="image" src="${banner.picture }" width="50%" height="50%">
