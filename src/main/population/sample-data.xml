@@ -230,6 +230,12 @@
 	</bean>
 	
 	<!--  Employers -->
+	
+	<bean name ="phoneEmployer1" class="acme.datatypes.Phone">
+		<property name ="countryCode" value = "+1"/>
+		<property name ="number" value ="12345"/>	
+	</bean>
+	
 	<bean name ="employer1UserAccount" class ="acme.framework.entities.UserAccount">
 		<property name ="username" value ="employer1" />
 		<property name ="password" value ="employer1" />
@@ -239,6 +245,7 @@
 				<property name ="name" value ="Employer"/>
 				<property name ="surname" value = "One"/>
 				<property name ="email" value ="employer1@acme.com"/>
+				<property name = "phone" ref ="phoneEmployer1"/>
 			</bean>
 		</property>
 		<property name ="roles">
