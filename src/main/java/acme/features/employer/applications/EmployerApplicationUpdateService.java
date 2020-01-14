@@ -25,7 +25,18 @@ public class EmployerApplicationUpdateService implements AbstractUpdateService<E
 	@Override
 	public boolean authorise(final Request<Applications> request) {
 		assert request != null;
-		return true;
+		boolean result = true;
+		/*
+		 * int applicationId;
+		 * Applications application;
+		 * applicationId = request.getModel().getInteger("id");
+		 * application = this.repository.findOneApplicationById(applicationId);
+		 * Status status = application.getStatus();
+		 * if (status != Status.PENDING) {
+		 * result = false;
+		 * }
+		 */
+		return result;
 	}
 
 	@Override
@@ -34,7 +45,7 @@ public class EmployerApplicationUpdateService implements AbstractUpdateService<E
 		assert entity != null;
 		assert errors != null;
 
-		request.bind(entity, errors, "moment", "reference", "statement", "skills", "qualifications");
+		request.bind(entity, errors, "reference", "moment", "statement", "skills", "qualifications");
 	}
 
 	@Override
@@ -43,7 +54,7 @@ public class EmployerApplicationUpdateService implements AbstractUpdateService<E
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "reference", "moment", "status", "statement", "skills", "qualifications");
+		request.unbind(entity, model, "status", "rejectReason");
 
 	}
 
