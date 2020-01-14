@@ -19,6 +19,6 @@ public interface WorkerJobRepository extends AbstractRepository {
 	@Query("select a from Job a where a.deadline>CURRENT_TIMESTAMP and a.finalMode = true")
 	Collection<Job> findManyJobs();
 
-	@Query("select a from Applications a")
-	Collection<Applications> findManyApplications();
+	@Query("select a from Applications a where a.worker.id=?1")
+	Collection<Applications> findManyApplicationsByWorkerId(int id);
 }

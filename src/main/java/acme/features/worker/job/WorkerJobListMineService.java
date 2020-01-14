@@ -13,6 +13,7 @@ import acme.entities.jobs.Job;
 import acme.entities.roles.Worker;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
+import acme.framework.entities.Principal;
 import acme.framework.services.AbstractListService;
 
 @Service
@@ -42,9 +43,10 @@ public class WorkerJobListMineService implements AbstractListService<Worker, Job
 		assert request != null;
 
 		Collection<Job> result;
-
+		Principal principal;
+		principal = request.getPrincipal();
 		result = this.repository.findManyJobs();
-		Collection<Applications> apps = this.repository.findManyApplications();
+		Collection<Applications> apps = this.repository.findManyApplicationsByWorkerId(principal.getActiveRoleId());
 		List<Job> result2 = new ArrayList<>();
 		for (Job j : result) {
 			for (Applications a : apps) {
