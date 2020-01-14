@@ -59,8 +59,7 @@
     				<acme:form-submit test="${command == 'show'}" code="employer.job.form.button.delete" action="/employer/job/delete" />
     				<acme:form-submit test="${command == 'create'}" code="employer.job.form.button.create" action="/employer/job/create" />
     				<acme:form-submit test="${command == 'delete'}" code="employer.job.form.button.delete" action="/employer/job/delete" />
-					<acme:form-submit test="${command == 'update'}" code="employer.job.form.button.update" action="/employer/job/update" />
-					  					
+					<acme:form-submit test="${command == 'update'}" code="employer.job.form.button.update" action="/employer/job/update" />  					
   					</c:when>
   					<c:otherwise>
  					<acme:form-textbox readonly="true" code="employer.job.form.label.reference" path="reference"/>
@@ -74,7 +73,7 @@
     				<acme:form-submit test="${command == 'show'}" code="employer.job.form.button.delete" action="/employer/job/delete" />
     				<acme:form-submit test="${command == 'create'}" code="employer.job.form.button.create" action="/employer/job/create" />
     				<acme:form-submit test="${command == 'delete'}" code="employer.job.form.button.delete" action="/employer/job/delete" />
-  					
+  					<acme:form-submit method="get" code="employer.job.form.button.duty" action="/employer/duty/list?descriptor_id=${idDesc}"/>
   					</c:otherwise>
   					</c:choose>
   				</c:otherwise>
