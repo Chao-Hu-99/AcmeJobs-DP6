@@ -40,7 +40,7 @@ public class WorkerJobListMineService implements AbstractListService<Worker, Job
 
 		Collection<Job> result;
 
-		result = this.repository.findManyJobs();
+		result = this.repository.findManyJobsActive();
 
 		return result;
 	}
