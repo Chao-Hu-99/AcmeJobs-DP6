@@ -7,6 +7,8 @@
 	String idDesc = String.format("%d", request.getAttribute("descriptorId"));
 	request.setAttribute("idDesc", idDesc);
 	session.setAttribute("idDescr", idDesc);
+	String idJob= String.format("%d", request.getAttribute("jobId"));
+	request.setAttribute("idJob", idJob);
 	%>
 
 <acme:form readonly="false">
@@ -85,6 +87,9 @@
   	
   	
   	
+  <acme:form>
+	<acme:form-submit method="get" code="employer.job.form.button.list.auditRecords" action="/employer/audit-record/list?id=${idJob}"/>
+</acme:form>
   	
     <acme:form-return code="employer.job.form.button.return" />
     	
