@@ -110,7 +110,7 @@ master.menu.auditor.nonMineJobs-list = Listar trabajos sin mi registro de audito
 # master.menu.worker ##########################################################
 
 master.menu.worker= Trabajador
-master.menu.employer.job-list= Listar todos los trabajos
+master.menu.worker.job-list= Listar todos los trabajos
 master.menu.worker.applications-list= Listar todas mis solicitudes
 
 
@@ -118,10 +118,6 @@ master.menu.worker.applications-list= Listar todas mis solicitudes
 
 master.menu.user-account = Cuenta
 master.menu.user-account.general-data = Datos generales
-master.menu.user-account.provider = Datos de proveedor
-master.menu.user-account.become-provider = Hazte proveedor
-master.menu.user-account.consumer = Datos de consumidor
-master.menu.user-account.become-consumer = Hazte consumidor
 master.menu.user-account.become-employer = Hazte empleador
 master.menu.user-account.employer = Datos de empleador
 master.menu.user-account.become-sponsor = Hazte patrocinador

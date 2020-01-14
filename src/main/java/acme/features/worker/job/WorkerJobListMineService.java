@@ -1,15 +1,19 @@
 
 package acme.features.worker.job;
 
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.entities.applications.Applications;
 import acme.entities.jobs.Job;
 import acme.entities.roles.Worker;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
+import acme.framework.entities.Principal;
 import acme.framework.services.AbstractListService;
 
 @Service
@@ -40,7 +44,7 @@ public class WorkerJobListMineService implements AbstractListService<Worker, Job
 
 		Collection<Job> result;
 
-		result = this.repository.findManyJobs();
+		result = this.repository.findManyJobsActive();
 
 		return result;
 	}

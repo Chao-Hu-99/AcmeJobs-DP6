@@ -230,6 +230,12 @@
 	</bean>
 	
 	<!--  Employers -->
+	
+	<bean name ="phoneEmployer1" class="acme.datatypes.Phone">
+		<property name ="countryCode" value = "+1"/>
+		<property name ="number" value ="12345"/>	
+	</bean>
+	
 	<bean name ="employer1UserAccount" class ="acme.framework.entities.UserAccount">
 		<property name ="username" value ="employer1" />
 		<property name ="password" value ="employer1" />
@@ -239,6 +245,7 @@
 				<property name ="name" value ="Employer"/>
 				<property name ="surname" value = "One"/>
 				<property name ="email" value ="employer1@acme.com"/>
+				<property name = "phone" ref ="phoneEmployer1"/>
 			</bean>
 		</property>
 		<property name ="roles">
@@ -783,6 +790,37 @@
 		<property name= "job" ref= "job3"/>
 		<property name= "auditor" ref= "auditor01"/>
 	</bean> 
+	
+	
+	<bean id="banner1" class="acme.entities.banner.Banner">
+		<property name="picture" value="https://i.imgur.com/8YcXhS0.png"/>
+		<property name="slogan" value="Our planets needs superheroes like you"/>
+		<property name="targetURL" value="https://www.wwf.es/"/>
+	</bean>
+	
+	<bean id="banner2" class="acme.entities.banner.Banner">
+		<property name="picture" value="https://i.imgur.com/NGLSjk6.png"/>
+		<property name="slogan" value="What would you change"/>
+		<property name="targetURL" value="https://www.change.org/es"/>
+	</bean>
+	
+	<bean id="banner3" class="acme.entities.banner.Banner">
+		<property name="picture" value="https://i.imgur.com/2eVF1HG.png"/>
+		<property name="slogan" value="afoprodei"/>
+		<property name="targetURL" value="https://www.afoprodei.com/"/>
+	</bean>
+	
+	<bean id="banner4" class="acme.entities.banner.Banner">
+		<property name="picture" value="https://i.imgur.com/fihihcF.png"/>
+		<property name="slogan" value="Fundación El Gancho infantil"/>
+		<property name="targetURL" value="https://fundacionelgancho.org/"/>
+	</bean>
+	
+	<bean id="banner5" class="acme.entities.banner.Banner">
+		<property name="picture" value="https://i.imgur.com/MtBRoNP.png"/>
+		<property name="slogan" value="Médicos sin fronteras"/>
+		<property name="targetURL" value="https://www.msf.org/"/>
+	</bean>
   
 </beans>
 
