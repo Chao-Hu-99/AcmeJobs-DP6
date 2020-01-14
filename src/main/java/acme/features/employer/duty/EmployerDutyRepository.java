@@ -27,6 +27,9 @@ public interface EmployerDutyRepository extends AbstractRepository {
 	@Query("select a from Descriptor a where a.id =?1")
 	Descriptor findDescriptorById(int descId);
 
+	@Query("select a from Job a where a.descriptor.id = ?1")
+	Job findOneJobByDescriptorId(int id);
+
 	@Query("select a from Duty a where a.id = ?1")
 	Duty findOneById(int id);
 
