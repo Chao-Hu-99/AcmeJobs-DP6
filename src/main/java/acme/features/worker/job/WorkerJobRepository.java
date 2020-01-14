@@ -6,6 +6,7 @@ import java.util.Collection;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
+import acme.entities.applications.Applications;
 import acme.entities.jobs.Job;
 import acme.framework.repositories.AbstractRepository;
 
@@ -18,4 +19,6 @@ public interface WorkerJobRepository extends AbstractRepository {
 	@Query("select a from Job a where a.deadline>CURRENT_TIMESTAMP and a.finalMode = true")
 	Collection<Job> findManyJobs();
 
+	@Query("select a from Applications a")
+	Collection<Applications> findManyApplications();
 }
