@@ -28,6 +28,9 @@ public class EmployerDutyController extends AbstractController<Employer, Duty> {
 	@Autowired
 	private EmployerDutyUpdateService	updateService;
 
+	@Autowired
+	private EmployerDutyDeleteService	deleteService;
+
 
 	@PostConstruct
 	private void initialise() {
@@ -38,6 +41,8 @@ public class EmployerDutyController extends AbstractController<Employer, Duty> {
 		super.addBasicCommand(BasicCommand.CREATE, this.createService);
 
 		super.addBasicCommand(BasicCommand.UPDATE, this.updateService);
+
+		super.addBasicCommand(BasicCommand.DELETE, this.deleteService);
 
 	}
 
