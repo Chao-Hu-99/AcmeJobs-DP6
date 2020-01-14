@@ -331,7 +331,7 @@
 		<property name ="salary" value = "25,000.98 EUR"/>
 		<property name ="description" value ="Lorem ipsum sit dolor amet."/>
 		<property name = "moreInfo" value = "http://www.example.com" />
-		<property name ="finalMode" value ="false" />
+		<property name ="finalMode" value ="true" />
 		<property name ="employer" ref ="employer1Employer"/>
 		<property name = "descriptor" ref ="descriptorJob2"/>
 		<property name = "status" value ="PUBLISHED"/>
@@ -357,7 +357,7 @@
 		<property name ="salary" value = "35,000.98 EUR"/>
 		<property name ="description" value ="Lorem ipsum sit dolor amet."/>
 		<property name = "moreInfo" value = "http://www.example.com" />
-		<property name ="finalMode" value ="false" />
+		<property name ="finalMode" value ="true" />
 		<property name ="employer" ref ="employer2Employer"/>
 		<property name = "descriptor" ref ="descriptorJob3"/>
 
@@ -398,7 +398,7 @@
 		<property name ="salary" value = "45,000.98 EUR"/>
 		<property name ="description" value ="Lorem ipsum sit dolor amet."/>
 		<property name = "moreInfo" value = "http://www.example.com" />
-		<property name ="finalMode" value ="false" />
+		<property name ="finalMode" value ="true" />
 		<property name ="employer" ref ="employer2Employer"/>
 		<property name = "descriptor" ref ="descriptorJob4"/>
 		<property name = "status" value ="PUBLISHED"/>

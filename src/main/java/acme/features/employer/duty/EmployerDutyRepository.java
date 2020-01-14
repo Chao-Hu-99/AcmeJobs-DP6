@@ -32,4 +32,12 @@ public interface EmployerDutyRepository extends AbstractRepository {
 
 	@Query("select a from Duty a")
 	Collection<Duty> findManyAll();
+
+	@Query("select d.id from Descriptor d left join d.duties du where du.id=?1")
+	int findDescriptorIDbyDutyId(int id);
+	//Retrieve Job finalMode with descriptor id
+
+	@Query("select j.finalMode from Job j where j.descriptor.id=?1")
+	boolean findStatusJobByDescriptorId(int id);
+
 }
