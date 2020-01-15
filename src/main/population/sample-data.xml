@@ -331,7 +331,7 @@
 		<property name ="salary" value = "25,000.98 EUR"/>
 		<property name ="description" value ="Lorem ipsum sit dolor amet."/>
 		<property name = "moreInfo" value = "http://www.example.com" />
-		<property name ="finalMode" value ="true" />
+		<property name ="finalMode" value ="false" />
 		<property name ="employer" ref ="employer1Employer"/>
 		<property name = "descriptor" ref ="descriptorJob2"/>
 		<property name = "status" value ="PUBLISHED"/>
@@ -357,7 +357,7 @@
 		<property name ="salary" value = "35,000.98 EUR"/>
 		<property name ="description" value ="Lorem ipsum sit dolor amet."/>
 		<property name = "moreInfo" value = "http://www.example.com" />
-		<property name ="finalMode" value ="true" />
+		<property name ="finalMode" value ="false" />
 		<property name ="employer" ref ="employer2Employer"/>
 		<property name = "descriptor" ref ="descriptorJob3"/>
 
@@ -371,7 +371,7 @@
 			<list>
 				<ref bean="DutyDescriptorJob3" />
 				<ref bean="DutyDescriptorJob5" />
-				<ref bean="DutyDescriptorJob6" />
+				<ref bean="DutyDescriptorJob10" />
 			</list>
 		</property>
 	</bean>
@@ -380,7 +380,7 @@
 		<property name ="description" value ="Description duty 5" />
 		<property name ="percentage" value = "55" />
 	</bean>
-	<bean name ="DutyDescriptorJob6" class ="acme.entities.jobs.Duty">
+	<bean name ="DutyDescriptorJob10" class ="acme.entities.jobs.Duty">
 		<property name ="title" value ="Duty6" />
 		<property name ="description" value ="Description duty 6" />
 		<property name ="percentage" value = "96" />
@@ -398,7 +398,7 @@
 		<property name ="salary" value = "45,000.98 EUR"/>
 		<property name ="description" value ="Lorem ipsum sit dolor amet."/>
 		<property name = "moreInfo" value = "http://www.example.com" />
-		<property name ="finalMode" value ="true" />
+		<property name ="finalMode" value ="false" />
 		<property name ="employer" ref ="employer2Employer"/>
 		<property name = "descriptor" ref ="descriptorJob4"/>
 		<property name = "status" value ="PUBLISHED"/>
@@ -415,6 +415,110 @@
 		<property name ="description" value ="Description duty 4" />
 		<property name ="percentage" value = "25" />
 	</bean>
+	
+	<bean name ="job6" class="acme.entities.jobs.Job">
+		<property name ="reference" value ="EMP2-JOB6"/>
+		<property name ="title" value ="Title 6" />
+		<property name ="deadline" value = "2030/12/11 23:59"/>
+		<property name ="salary" value = "45,000.98 EUR"/>
+		<property name ="description" value ="Lorem ipsum sit dolor amet."/>
+		<property name = "moreInfo" value = "http://www.example.com" />
+		<property name ="finalMode" value ="true" />
+		<property name ="employer" ref ="employer2Employer"/>
+		<property name = "descriptor" ref ="descriptorJob6"/>
+		<property name = "status" value ="PUBLISHED"/>
+	
+	</bean>
+	
+	<bean name ="descriptorJob6" class ="acme.entities.jobs.Descriptor">
+		<property name ="description" value ="Description6" />
+		<property name ="duties" ref ="DutyDescriptorJob6" />
+	</bean>
+	
+	<bean name ="DutyDescriptorJob6" class ="acme.entities.jobs.Duty">
+		<property name ="title" value ="Duty6" />
+		<property name ="description" value ="Description duty 6" />
+		<property name ="percentage" value = "100" />
+	</bean>
+	
+	
+	<bean name ="job7" class="acme.entities.jobs.Job">
+		<property name ="reference" value ="EMP1-JOB7"/>
+		<property name ="title" value ="Title 7" />
+		<property name ="deadline" value = "2030/12/11 23:59"/>
+		<property name ="salary" value = "45,000.98 EUR"/>
+		<property name ="description" value ="Lorem ipsum sit dolor amet."/>
+		<property name = "moreInfo" value = "http://www.example.com" />
+		<property name ="finalMode" value ="true" />
+		<property name ="employer" ref ="employer1Employer"/>
+		<property name = "descriptor" ref ="descriptorJob7"/>
+		<property name = "status" value ="PUBLISHED"/>
+	
+	</bean>
+	
+	<bean name ="descriptorJob7" class ="acme.entities.jobs.Descriptor">
+		<property name ="description" value ="Description7" />
+		<property name ="duties" ref ="DutyDescriptorJob7" />
+	</bean>
+	
+	<bean name ="DutyDescriptorJob7" class ="acme.entities.jobs.Duty">
+		<property name ="title" value ="Duty7" />
+		<property name ="description" value ="Description duty 7" />
+		<property name ="percentage" value = "100" />
+	</bean>
+	
+	<bean name ="job8" class="acme.entities.jobs.Job">
+		<property name ="reference" value ="EMP1-JOB8"/>
+		<property name ="title" value ="Title 8" />
+		<property name ="deadline" value = "2030/12/11 23:59"/>
+		<property name ="salary" value = "45,000.98 EUR"/>
+		<property name ="description" value ="Lorem ipsum sit dolor amet."/>
+		<property name = "moreInfo" value = "http://www.example.com" />
+		<property name ="finalMode" value ="true" />
+		<property name ="employer" ref ="employer1Employer"/>
+		<property name = "descriptor" ref ="descriptorJob8"/>
+		<property name = "status" value ="PUBLISHED"/>
+	
+	</bean>
+	
+	<bean name ="descriptorJob8" class ="acme.entities.jobs.Descriptor">
+		<property name ="description" value ="Description8" />
+		<property name ="duties" ref ="DutyDescriptorJob8" />
+	</bean>
+	
+	<bean name ="DutyDescriptorJob8" class ="acme.entities.jobs.Duty">
+		<property name ="title" value ="Duty8" />
+		<property name ="description" value ="Description duty 8" />
+		<property name ="percentage" value = "100" />
+	</bean>
+	
+	<bean name ="job9" class="acme.entities.jobs.Job">
+		<property name ="reference" value ="EMP2-JOB9"/>
+		<property name ="title" value ="Title 9" />
+		<property name ="deadline" value = "2030/12/11 23:59"/>
+		<property name ="salary" value = "45,000.98 EUR"/>
+		<property name ="description" value ="Lorem ipsum sit dolor amet."/>
+		<property name = "moreInfo" value = "http://www.example.com" />
+		<property name ="finalMode" value ="true" />
+		<property name ="employer" ref ="employer2Employer"/>
+		<property name = "descriptor" ref ="descriptorJob9"/>
+		<property name = "status" value ="PUBLISHED"/>
+	
+	</bean>
+	
+	<bean name ="descriptorJob9" class ="acme.entities.jobs.Descriptor">
+		<property name ="description" value ="Description9" />
+		<property name ="duties" ref ="DutyDescriptorJob9" />
+	</bean>
+	
+	<bean name ="DutyDescriptorJob9" class ="acme.entities.jobs.Duty">
+		<property name ="title" value ="Duty9" />
+		<property name ="description" value ="Description duty 9" />
+		<property name ="percentage" value = "100" />
+	</bean>
+	
+	
+	
 	
 	<bean name ="job5" class="acme.entities.jobs.Job">
 		<property name ="reference" value ="EMP2-JOB5"/>
@@ -739,10 +843,10 @@
 	
 	<bean id="auditRecord01" class="acme.entities.auditRecords.AuditRecord">
 		<property name= "title" value= "Audit record 1"/>
-		<property name= "status" value= "DRAFT"/>
+		<property name= "status" value= "PUBLISHED"/>
 		<property name= "moment" value= "2019/10/20 21:00"/>
 		<property name= "body" value= "Body audit record 1"/>
-		<property name= "job" ref= "job1"/>
+		<property name= "job" ref= "job6"/>
 		<property name= "auditor" ref= "auditor01"/>
 	</bean> 
 	
@@ -751,7 +855,7 @@
 		<property name= "status" value= "PUBLISHED"/>
 		<property name= "moment" value= "2018/12/03 19:00"/>
 		<property name= "body" value= "Body audit record2"/>
-		<property name= "job" ref= "job4"/>
+		<property name= "job" ref= "job7"/>
 		<property name= "auditor" ref= "auditor02"/>
 	</bean> 
 	
@@ -760,16 +864,16 @@
 		<property name= "status" value= "PUBLISHED"/>
 		<property name= "moment" value= "2018/10/20 11:35"/>
 		<property name= "body" value= "Body audit record 3"/>
-		<property name= "job" ref= "job2"/>
+		<property name= "job" ref= "job8"/>
 		<property name= "auditor" ref= "auditor01"/>
 	</bean> 
 	
 	<bean id="auditRecord04" class="acme.entities.auditRecords.AuditRecord">
 		<property name= "title" value= "Audit record 4"/>
-		<property name= "status" value= "DRAFT"/>
+		<property name= "status" value= "PUBLISHED"/>
 		<property name= "moment" value= "2012/10/12 02:00"/>
 		<property name= "body" value= "Body audit record 4"/>
-		<property name= "job" ref= "job2"/>
+		<property name= "job" ref= "job8"/>
 		<property name= "auditor" ref= "auditor02"/>
 	</bean> 
 	
@@ -778,16 +882,16 @@
 		<property name= "status" value= "PUBLISHED"/>
 		<property name= "moment" value= "2012/11/23 23:00"/>
 		<property name= "body" value= "Body audit record 5"/>
-		<property name= "job" ref= "job1"/>
+		<property name= "job" ref= "job6"/>
 		<property name= "auditor" ref= "auditor02"/>
 	</bean> 
 	
 	<bean id="auditRecord06" class="acme.entities.auditRecords.AuditRecord">
 		<property name= "title" value= "Audit record 6"/>
-		<property name= "status" value= "DRAFT"/>
+		<property name= "status" value= "PUBLISHED"/>
 		<property name= "moment" value= "2011/11/12 21:34"/>
 		<property name= "body" value= "Body audit record 6"/>
-		<property name= "job" ref= "job3"/>
+		<property name= "job" ref= "job9"/>
 		<property name= "auditor" ref= "auditor01"/>
 	</bean> 
 	

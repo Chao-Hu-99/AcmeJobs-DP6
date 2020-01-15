@@ -12,7 +12,7 @@ import acme.framework.repositories.AbstractRepository;
 @Repository
 public interface AuditorNonMineJobAuditRepository extends AbstractRepository {
 
-	@Query("select j from Job j where j.id not in(select a.job.id from AuditRecord a where a.auditor.id = ?1)")
+	@Query("select j from Job j where j.id not in(select a.job.id from AuditRecord a where a.auditor.id = ?1)and j.finalMode=true")
 	Collection<Job> jobsAuditorHasNotWrittenAudit(int id);
 
 	@Query("select j from Job j where j.id = ?1")
