@@ -20,9 +20,7 @@ public class EmployerAuditRecordShowService implements AbstractShowService<Emplo
 	@Override
 	public boolean authorise(final Request<AuditRecord> request) {
 		assert request != null;
-		int auditRecordId = request.getModel().getInteger("id");
-		AuditRecord ar = this.repository.findOneAuditRecordById(auditRecordId);
-		return ar.getStatus().equals("PUBLISHED");
+		return true;
 	}
 
 	@Override

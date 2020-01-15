@@ -7,3 +7,6 @@
 	<acme:list-column code="employer.auditRecord.list.label.title" path="title" width="80%" />
 	<acme:list-column code="employer.auditRecord.list.label.moment" path="moment" width="20%" />
 </acme:list>
+	
+  	<acme:form-return code="employer.auditRecord.form.button.return"/>
+

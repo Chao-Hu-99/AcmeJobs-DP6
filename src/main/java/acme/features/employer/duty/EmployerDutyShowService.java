@@ -26,21 +26,19 @@ public class EmployerDutyShowService implements AbstractShowService<Employer, Du
 		boolean result;
 		int dutyId;
 		int descriptorId;
-		Duty duty;
 		Employer employer;
 		Job job;
 		Principal principal;
 
 		dutyId = request.getModel().getInteger("id");
-		duty = this.repository.findOneById(dutyId);
-		descriptorId = request.getModel().getInteger("descriptor_id");
+		descriptorId = this.repository.findDescriptorIDbyDutyId(dutyId);
 		job = this.repository.findOneJobByDescriptorId(descriptorId);
 		employer = job.getEmployer();
 		principal = request.getPrincipal();
 
 		result = employer.getUserAccount().getId() == principal.getAccountId();
 
-		return true;
+		return result;
 	}
 
 	@Override
